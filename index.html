@@ -1,0 +1,34 @@
+<!doctype html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Javascript Greek Character keycodes</title>
+    <style type="text/css">
+      #keycodelist {width:300px;margin:0 auto;}
+      dt { background-color: #dadada;}
+      dd {display:inline;padding:5px 10px;}
+    </style>
+  </head>
+  <body>
+    <div id="keycodelist">
+    <h3>A list of keycodes #902 - #974</h3>
+    <p>which is (i think) all Greek characters.</p>
+    <p>Check the source for the js function if you need to look for a different range.</p>
+    <div id="keycodes">
+    	<dl id="kcDef">
+    	</dl>
+    </div>
+    <script type="Text/Javascript">
+    var kclist = document.getElementById("kcDef");
+    
+    for (var i = 902; i <= 974; i++) {
+      var dt = document.createElement("dt");
+      dt.appendChild(document.createTextNode(i));
+      var dd = document.createElement("dd");
+      dd.appendChild(document.createTextNode(String.fromCharCode(i)));
+      kclist.appendChild(dt);
+      kclist.appendChild(dd);
+    }
+    </script>
+  
+  </body>
+</html>
